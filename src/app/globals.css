@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #23272f;
+  --color-ink-soft: #6b7280;
+  --color-line: #c7cdd6;
+  --color-line-soft: #dfe3e9;
+  --color-paper: #ffffff;
+  --color-canvas: #f1f3f6;
+  --color-panel: #e8eaed;
+  --color-accent: #0050b5;
+  --color-accent-dark: #002452;
+  --color-accent-soft: #e5f1ff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+  --color-paper: var(--color-paper);
+  --color-canvas: var(--color-canvas);
+  --color-panel: var(--color-panel);
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+  --color-accent-soft: var(--color-accent-soft);
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes globe-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes net-flow {
+  to { stroke-dashoffset: -56; }
+}
+
+@keyframes geo-ping {
+  0% { r: 4; opacity: 0.9; }
+  100% { r: 22; opacity: 0; }
+}
+
+.animate-marquee { animation: marquee-scroll 22s linear infinite; }
+.animate-globe { animation: globe-rotate 60s linear infinite; transform-origin: 200px 200px; }
+.animate-net-flow { animation: net-flow 3.6s linear infinite; }
+.animate-geo-ping { animation: geo-ping 3s ease-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-globe, .animate-net-flow, .animate-geo-ping {
+    animation: none;
+  }
 }
