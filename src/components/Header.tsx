@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="relative z-50 border-b border-line-soft bg-paper">
       <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-6 px-6 py-4">
-        <LogoMark />
+        <LogoMark size="h-14" />
 
         <nav className="hidden items-center gap-7 md:flex">
           <Link href="/" className={`${navLink} ${isCurrent("/") ? navLinkCurrent : ""}`}>

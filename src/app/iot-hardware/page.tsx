@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
 import Placeholder from "@/components/Placeholder";
+import DetailedSolutionPage from "@/components/DetailedSolutionPage";
 
 export const metadata: Metadata = {
-  title: "IoT Hardware",
-  description: "Product catalogue of IoT devices for connectivity, monitoring and data collection.",
+  title: "IoT Hardware Sourcing & Supply",
+  description:
+    "We source, supply, and support high-quality IoT hardware — matched to your environment, not just your spec sheet.",
 };
 
 const devices = [
@@ -17,19 +19,85 @@ const devices = [
 export default function IotHardwarePage() {
   return (
     <>
+      <DetailedSolutionPage
+        kicker="IOT HARDWARE SOURCING & SUPPLY"
+        headline="The right devices, sourced right, supported for the long run."
+        subheading="We source, supply, and support high-quality IoT hardware — matched to your environment, not just your spec sheet."
+        heroPhoto="Photo: IoT hardware / device in the field"
+        overviewPhoto="Photo: field installation / commissioning"
+        closingPhoto="Photo: technician servicing IoT hardware"
+        overview={[
+          "IoT hardware only delivers value if it survives the environment it's deployed in, integrates with the systems around it, and keeps running long after installation day. Covvert Technologies sources and supplies IoT devices across a wide range of use cases, with the sourcing discipline of engineers who have to stand behind what they recommend — because we also install, commission, and support it.",
+          "We work with a vetted network of manufacturers and distributors, allowing us to specify hardware based on performance and durability rather than being tied to a single brand.",
+        ]}
+        includes={[
+          {
+            title: "Environmental monitoring sensors",
+            desc: "air quality, weather, soil, and ecological monitoring equipment for climate and environmental programs",
+          },
+          {
+            title: "Water level & quality sensors",
+            desc: "for water resource management, flood early-warning, and WASH (water, sanitation and hygiene) programs",
+          },
+          {
+            title: "Smart agriculture devices",
+            desc: "soil moisture, irrigation control, and crop-monitoring sensors for precision agriculture",
+          },
+          {
+            title: "Energy & smart metering",
+            desc: "smart meters and energy-monitoring devices for utilities and off-grid energy providers",
+          },
+          {
+            title: "Asset tracking & GPS devices",
+            desc: "for fleet management, logistics, and high-value asset protection",
+          },
+          {
+            title: "Industrial monitoring sensors",
+            desc: "vibration, temperature, and equipment-condition sensors for predictive maintenance",
+          },
+          {
+            title: "IoT gateways & communication hardware",
+            desc: "the connective layer that gets field data reliably from sensor to cloud",
+          },
+          {
+            title: "Installation & commissioning",
+            desc: "professional, field-tested installation, not just drop-shipped boxes",
+          },
+          {
+            title: "Systems integration support",
+            desc: "ensuring hardware talks correctly to dashboards, databases, and existing enterprise systems",
+          },
+          {
+            title: "Technical support & maintenance",
+            desc: "ongoing hardware support so devices keep reporting long after go-live",
+          },
+        ]}
+        approach={[
+          {
+            title: "Specify",
+            desc: "hardware selection grounded in the Solution Mapping output (or a standalone hardware assessment if that's all that's needed)",
+          },
+          {
+            title: "Source",
+            desc: "procurement from vetted manufacturers, balancing cost, durability, lead time, and after-sales support availability",
+          },
+          {
+            title: "Supply & deploy",
+            desc: "logistics, installation, and commissioning handled end-to-end, including field testing under real conditions",
+          },
+          {
+            title: "Support",
+            desc: "maintenance agreements and technical support so hardware failures are caught and resolved before they become data gaps",
+          },
+        ]}
+        whyItMatters="IoT failure in the field is rarely about the sensor chip — it's about heat, dust, power instability, poor mounting, or a device nobody is watching. We build for the conditions devices will actually face, not the datasheet conditions they were tested in."
+        whoThisIsFor="Organizations deploying field sensors, monitoring networks, or connected assets across remote, harsh, or distributed environments — particularly in agriculture, environmental monitoring, water and energy utilities, and logistics."
+      />
+
       <section className="px-6 py-14">
         <div className="mx-auto max-w-[1320px]">
-          <div className="mb-2 text-xs font-bold text-ink-soft">IOT HARDWARE</div>
-          <h1 className="text-[28px] leading-[1.18] font-extrabold">Product catalogue</h1>
-          <p className="mt-2.5 max-w-[60ch] text-ink-soft">
-            Devices and equipment, with specifications and imagery supplied by the client.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-canvas px-6 pb-14">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+          <h2 className="text-[28px] leading-[1.18] font-extrabold">Sample hardware categories</h2>
+          <div className="mt-6 grid grid-cols-2 gap-5 md:grid-cols-4">
             {devices.map((device) => (
               <div key={device} className="rounded border border-line-soft bg-white p-5.5">
                 <Placeholder label="Photo: device" className="mb-3 h-[130px]" />
@@ -44,34 +112,8 @@ export default function IotHardwarePage() {
             ))}
           </div>
           <p className="mt-4 text-[11px] italic text-[#8E97A3]">
-            Grid filters by category on the live site (e.g. connectivity, sensors, monitoring). Full
-            catalogue and specifications to be supplied by client.
+            Full catalogue and specifications to be supplied by client.
           </p>
-        </div>
-      </section>
-
-      <section className="px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
-          <h2 className="text-[28px] leading-[1.18] font-extrabold">Specification sheet</h2>
-          <div className="mt-4.5 rounded border border-line-soft px-4.5">
-            <div className="grid grid-cols-[1.4fr_1fr_1fr_0.8fr] gap-3 border-b border-line-soft py-3.5 text-[11.5px] font-bold text-ink-soft">
-              <div>Product</div>
-              <div>Connectivity</div>
-              <div>Power</div>
-              <div>Datasheet</div>
-            </div>
-            {devices.map((device) => (
-              <div
-                key={device}
-                className="grid grid-cols-[1.4fr_1fr_1fr_0.8fr] items-center gap-3 border-b border-line-soft py-3.5 text-[13px] last:border-b-0"
-              >
-                <div>{device}</div>
-                <div>4G / LoRaWAN</div>
-                <div>Solar / battery</div>
-                <div className="font-bold text-accent">Download</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

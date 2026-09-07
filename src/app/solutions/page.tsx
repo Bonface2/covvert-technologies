@@ -5,46 +5,46 @@ import Placeholder from "@/components/Placeholder";
 export const metadata: Metadata = {
   title: "Solutions & Services",
   description:
-    "Solution mapping, IoT hardware, technology & connectivity solutions, monitoring & evaluation, and completion reporting from Covvert Technologies.",
+    "Solution mapping, IoT hardware sourcing & supply, connectivity solutions, project monitoring & evaluation, and completion reporting from Covvert Technologies.",
 };
 
 const rows = [
   {
-    tag: "Consultancy",
-    title: "Consultancy services",
-    desc: "We help organizations identify the right technology solutions for their operational needs before procurement and implementation — needs assessments, solution architecture, infrastructure planning and implementation roadmaps.",
+    tag: "Solution Mapping",
+    title: "Invest in the right technology, from day one",
+    desc: "We help organizations identify, design, and validate the technology solutions that actually fit their operations — before a single shilling is spent on procurement.",
     href: "/solutions/consultancy",
-    cta: "See Consultancy Services",
+    cta: "See Solution Mapping",
     photo: "Photo: consultancy / solution in use",
   },
   {
-    tag: "Technology",
-    title: "Technology & IoT solutions",
-    desc: "We specialize in sourcing and supplying high-quality Internet of Things (IoT) devices — environmental monitoring, smart agriculture, energy metering, asset tracking and industrial monitoring solutions.",
-    href: "/solutions/technology",
-    cta: "See Technology & IoT Solutions",
-    photo: "Photo: technology / IoT solution in use",
-  },
-  {
-    tag: "Hardware",
-    title: "IoT hardware",
-    desc: "Devices and equipment for connectivity, monitoring and data collection, with specifications and imagery supplied by the client.",
+    tag: "IoT Hardware",
+    title: "The right devices, sourced right, supported for the long run",
+    desc: "We source, supply, and support high-quality IoT hardware — matched to your environment, not just your spec sheet.",
     href: "/iot-hardware",
-    cta: "See IoT Hardware",
+    cta: "See IoT Hardware Sourcing & Supply",
     photo: "Photo: IoT hardware / device in the field",
   },
   {
+    tag: "Connectivity",
+    title: "One SIM. Every network. No borders.",
+    desc: "Global IoT connectivity built on a cloud-native, distributed core — so your devices stay online, wherever they are.",
+    href: "/solutions/technology",
+    cta: "See Connectivity Solutions",
+    photo: "Photo: technology / connectivity solution in use",
+  },
+  {
     tag: "Monitoring",
-    title: "Monitoring & evaluation",
-    desc: "Structured monitoring and evaluation services to ensure projects remain on track and deliver measurable results.",
+    title: "Know what's working, before it's too late to fix",
+    desc: "Structured monitoring and evaluation that keeps technology-driven projects on track, evidence-backed, and accountable.",
     href: "/monitoring-evaluation",
-    cta: "See Monitoring & Evaluation",
+    cta: "See Project Monitoring & Evaluation",
     photo: "Photo: monitoring dashboard / field data collection",
   },
   {
     tag: "Reporting",
-    title: "Completion reporting",
-    desc: "How Covvert documents project achievements and formally closes projects with comprehensive completion reports.",
+    title: "Close every project with clarity, not loose ends",
+    desc: "Comprehensive completion reporting that documents what was delivered, what it achieved, and what should happen next.",
     href: "/completion-reporting",
     cta: "See Completion Reporting",
     photo: "Photo/document preview: sample completion report",
@@ -57,11 +57,12 @@ export default function SolutionsPage() {
       <section className="px-6 py-14">
         <div className="mx-auto max-w-[1320px]">
           <div className="mb-2 text-xs font-bold text-ink-soft">SOLUTIONS &amp; SERVICES</div>
-          <h1 className="max-w-[24ch] text-[28px] leading-[1.18] font-extrabold">
-            Consultancy and technology, delivered together
+          <h1 className="max-w-[30ch] text-[28px] leading-[1.18] font-extrabold">
+            We don&apos;t simply sell technology. We help you move from challenges to connected solutions.
           </h1>
-          <p className="mt-3 max-w-[46ch] text-ink-soft">
-            Every solution below has its own page with full detail.
+          <p className="mt-3 max-w-[60ch] text-ink-soft">
+            From solutions to data, and from data to measurable results. Every area below has its own
+            page with full detail.
           </p>
         </div>
       </section>

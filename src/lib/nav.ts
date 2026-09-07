@@ -8,32 +8,32 @@ export type SolutionLink = {
 export const solutionLinks: SolutionLink[] = [
   {
     href: "/solutions/consultancy",
-    title: "Consultancy Services",
-    blurb: "Advisory for planning & implementation",
+    title: "Solution Mapping",
+    blurb: "Invest in the right technology, from day one",
     icon: "consultancy",
   },
   {
-    href: "/solutions/technology",
-    title: "Technology & IoT Solutions",
-    blurb: "Connectivity & monitoring tech",
-    icon: "technology",
-  },
-  {
     href: "/iot-hardware",
-    title: "IoT Hardware",
-    blurb: "Product catalogue & specifications",
+    title: "IoT Hardware Sourcing & Supply",
+    blurb: "Devices sourced right, supported for the long run",
     icon: "iot",
   },
   {
+    href: "/solutions/technology",
+    title: "Connectivity Solutions",
+    blurb: "One SIM. Every network. No borders.",
+    icon: "technology",
+  },
+  {
     href: "/monitoring-evaluation",
-    title: "Monitoring & Evaluation",
-    blurb: "Tracking deployed solutions",
+    title: "Project Monitoring & Evaluation",
+    blurb: "Know what's working, before it's too late",
     icon: "me",
   },
   {
     href: "/completion-reporting",
     title: "Completion Reporting",
-    blurb: "Reports on completed projects",
+    blurb: "Close every project with clarity, not loose ends",
     icon: "reporting",
   },
 ];

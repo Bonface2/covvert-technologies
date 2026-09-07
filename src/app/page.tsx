@@ -2,7 +2,79 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import HeroGlobe3D from "@/components/HeroGlobe3D";
 import LogoMarquee from "@/components/LogoMarquee";
-import Placeholder from "@/components/Placeholder";
+import SolutionIcon from "@/components/SolutionIcon";
+import WhyChooseIcon, { type WhyChooseIconKey } from "@/components/WhyChooseIcon";
+
+const whyChooseItems: { icon: WhyChooseIconKey; title: string; desc: string }[] = [
+  {
+    icon: "client-centred",
+    title: "Client-Centred",
+    desc: "We understand your challenge before designing the solution.",
+  },
+  {
+    icon: "connected",
+    title: "Connected",
+    desc: "We connect people, devices, systems, and data.",
+  },
+  {
+    icon: "technology-driven",
+    title: "Technology-Driven",
+    desc: "We embrace innovative technologies that create practical value.",
+  },
+  {
+    icon: "solution-focused",
+    title: "Solution-Focused",
+    desc: "We deliver solutions designed to work, scale, and make an impact.",
+  },
+  {
+    icon: "agile",
+    title: "Agile",
+    desc: "We adapt quickly and think creatively to solve complex problems.",
+  },
+  {
+    icon: "results-oriented",
+    title: "Results-Oriented",
+    desc: "We measure success through tangible outcomes and measurable value.",
+  },
+];
+
+const whatWeDoItems: { icon: "iot" | "consultancy" | "technology" | "me" | "reporting"; title: string; desc: string; href: string; cta: string }[] = [
+  {
+    icon: "iot",
+    title: "Technology & IoT",
+    desc: "Sourcing and deploying smart hardware and IoT technologies for real-world applications.",
+    href: "/iot-hardware",
+    cta: "Explore hardware →",
+  },
+  {
+    icon: "consultancy",
+    title: "Solution Mapping & Advisory",
+    desc: "Identifying the right technologies and approaches to solve specific organisational challenges.",
+    href: "/solutions/consultancy",
+    cta: "Explore solution mapping →",
+  },
+  {
+    icon: "technology",
+    title: "Connectivity Solutions",
+    desc: "Connecting people, devices, systems, and data through reliable connectivity solutions.",
+    href: "/solutions/technology",
+    cta: "Explore connectivity →",
+  },
+  {
+    icon: "me",
+    title: "Monitoring, Evaluation & Data",
+    desc: "Turning project data into insights that improve performance and decision-making.",
+    href: "/monitoring-evaluation",
+    cta: "Explore M&E →",
+  },
+  {
+    icon: "reporting",
+    title: "Completion Reporting",
+    desc: "Documenting implementation, achievements, results, and lessons through evidence-based reporting.",
+    href: "/completion-reporting",
+    cta: "Explore reporting →",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -20,17 +92,13 @@ export default function HomePage() {
               <span className="h-[7px] w-[7px] rounded-full bg-[#3DDC84] shadow-[0_0_0_3px_rgba(61,220,132,0.2)]" />
               Live across Africa and beyond
             </span>
-            <h1 className="mt-6 max-w-[12ch] text-5xl leading-[1.08] font-extrabold text-white md:text-[64px]">
-              Connectivity, <span className="text-[#338DFF]">built for the field.</span>
+            <h1 className="mt-6 max-w-[13ch] text-5xl leading-[1.08] font-extrabold text-white md:text-[64px]">
+              Technology, <span className="text-[#338DFF]">connected to outcomes.</span>
             </h1>
             <div className="mt-9 flex gap-3">
               <Button href="/contact">Request a Consultation</Button>
             </div>
             <div className="mt-10 flex gap-6 sm:gap-10">
-              <div>
-                <b className="block text-3xl text-white">50+</b>
-                <span className="text-xs text-[#8FA0BF]">PROJECTS DEPLOYED</span>
-              </div>
               <div>
                 <b className="block text-3xl text-white">5</b>
                 <span className="text-xs text-[#8FA0BF]">COUNTRIES SERVED</span>
@@ -49,36 +117,23 @@ export default function HomePage() {
 
       <section className="bg-canvas px-6 py-14">
         <div className="mx-auto max-w-[1320px]">
-          <h2 className="text-[28px] leading-[1.18] font-extrabold">Why teams work with Covvert</h2>
-          <div className="mt-7 grid gap-5.5 md:grid-cols-3">
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <div className="mb-2.5 inline-block rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-bold text-accent">
-                Built for the field
+          <h2 className="text-[28px] leading-[1.18] font-extrabold">Why choose Covvert Technologies?</h2>
+          <p className="mt-2 max-w-[60ch] text-ink-soft">
+            We don&apos;t just provide technology. We connect the right solutions to real-world
+            challenges.
+          </p>
+          <div className="mt-7 grid gap-5.5 sm:grid-cols-2 lg:grid-cols-3">
+            {whyChooseItems.map((item) => (
+              <div key={item.title} className="rounded border border-line-soft bg-white p-5.5">
+                <WhyChooseIcon icon={item.icon} className="mb-3 h-6 w-6 text-accent" />
+                <h3 className="mb-1.5 text-[15px] font-extrabold">{item.title}</h3>
+                <p className="text-[13px] text-ink-soft">{item.desc}</p>
               </div>
-              <h3 className="mb-2 text-[15px] font-extrabold">Hardware that survives deployment</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                IoT devices engineered for the connectivity and environmental conditions of the markets we serve.
-              </p>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <div className="mb-2.5 inline-block rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-bold text-accent">
-                End-to-end
-              </div>
-              <h3 className="mb-2 text-[15px] font-extrabold">From design to completion report</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                We take projects from consultancy and installation through to monitoring, evaluation and reporting.
-              </p>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <div className="mb-2.5 inline-block rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-bold text-accent">
-                Trusted locally
-              </div>
-              <h3 className="mb-2 text-[15px] font-extrabold">On-the-ground expertise</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Local implementation knowledge paired with technical depth in connectivity and IoT.
-              </p>
-            </div>
+            ))}
           </div>
+          <p className="mt-8 text-center text-lg font-extrabold tracking-tight text-ink">
+            Understand. <span className="text-accent">Connect.</span> Innovate. Deliver.
+          </p>
         </div>
       </section>
 
@@ -90,53 +145,22 @@ export default function HomePage() {
               View all solutions →
             </Button>
           </div>
-          <div className="mt-7 grid gap-5.5 md:grid-cols-3">
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">IoT Hardware</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Devices and equipment for connectivity, monitoring and data collection.
-              </p>
-              <Link href="/iot-hardware" className="mt-2 inline-block text-[13px] font-bold text-accent">
-                Explore hardware →
-              </Link>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">Consultancy Services</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Technical advisory to plan and implement connectivity and IoT projects.
-              </p>
-              <Link href="/solutions/consultancy" className="mt-2 inline-block text-[13px] font-bold text-accent">
-                Explore services →
-              </Link>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">Monitoring &amp; Evaluation</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Tracking deployed solutions and measuring project impact over time.
-              </p>
-              <Link href="/monitoring-evaluation" className="mt-2 inline-block text-[13px] font-bold text-accent">
-                Explore M&amp;E →
-              </Link>
-            </div>
+          <div className="mt-7 grid gap-5.5 sm:grid-cols-2 lg:grid-cols-3">
+            {whatWeDoItems.map((item) => (
+              <div key={item.title} className="rounded border border-line-soft bg-white p-5.5">
+                <SolutionIcon icon={item.icon} className="mb-3 h-6 w-6 text-accent" />
+                <h3 className="mb-2 text-[15px] font-extrabold">{item.title}</h3>
+                <p className="text-[13.5px] text-ink-soft">{item.desc}</p>
+                <Link href={item.href} className="mt-2 inline-block text-[13px] font-bold text-accent">
+                  {item.cta}
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="bg-canvas px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
-          <h2 className="text-[28px] leading-[1.18] font-extrabold">Completed projects</h2>
-          <p className="mt-2 max-w-[60ch] text-ink-soft">
-            A selection of deployments across our connectivity and IoT work.
-          </p>
-          <div className="mt-6 grid gap-5.5 md:grid-cols-3">
-            <Placeholder label="Photo: completed project #1" className="h-[170px]" />
-            <Placeholder label="Photo: completed project #2" className="h-[170px]" />
-            <Placeholder label="Photo: completed project #3" className="h-[170px]" />
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-14">
         <div className="mx-auto max-w-[1320px]">
           <h2 className="text-xl font-bold text-ink-soft">Trusted by / working alongside</h2>
           <div className="mt-5">

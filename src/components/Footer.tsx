@@ -19,6 +19,9 @@ export default function Footer() {
           <Link href="/about" className="mb-1.5 block text-ink-soft hover:text-ink">
             About Us
           </Link>
+          <Link href="/industries" className="mb-1.5 block text-ink-soft hover:text-ink">
+            Industries
+          </Link>
           <Link href="/solutions" className="mb-1.5 block text-ink-soft hover:text-ink">
             Solutions &amp; Services
           </Link>

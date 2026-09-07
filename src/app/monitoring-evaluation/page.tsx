@@ -1,71 +1,87 @@
 import type { Metadata } from "next";
-import Button from "@/components/Button";
-import Placeholder from "@/components/Placeholder";
+import DetailedSolutionPage from "@/components/DetailedSolutionPage";
 
 export const metadata: Metadata = {
-  title: "Monitoring & Evaluation",
+  title: "Project Monitoring & Evaluation",
   description:
-    "Structured monitoring and evaluation services that ensure projects remain on track and deliver measurable results.",
+    "Structured monitoring and evaluation that keeps technology-driven projects on track, evidence-backed, and accountable.",
 };
 
 export default function MonitoringEvaluationPage() {
   return (
-    <>
-      <section className="px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="mb-2 text-xs font-bold text-ink-soft">MONITORING &amp; EVALUATION</div>
-          <div className="grid items-center gap-9 md:grid-cols-2">
-            <div>
-              <h1 className="text-[28px] leading-[1.18] font-extrabold">
-                Tracking projects from deployment to impact
-              </h1>
-              <p className="mt-3 max-w-[46ch] text-ink-soft">
-                We provide structured monitoring and evaluation services to ensure projects remain on
-                track and deliver measurable results — timely, evidence-based information that supports
-                informed decision-making, strengthens accountability, and improves project performance.
-              </p>
-              <div className="mt-5">
-                <Button href="/contact">Request a Consultation</Button>
-              </div>
-            </div>
-            <Placeholder label="Photo: monitoring dashboard / field data collection" className="h-[240px]" />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-canvas px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
-          <h2 className="text-[28px] leading-[1.18] font-extrabold">Our approach</h2>
-          <div className="mt-6 grid gap-5.5 md:grid-cols-3">
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">1. Monitoring frameworks &amp; baseline</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Monitoring frameworks and quality assurance set up at the start of a project.
-              </p>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">2. Ongoing monitoring</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Progress &amp; milestone tracking, performance measurement, data collection &amp; analysis,
-                and risk identification &amp; mitigation.
-              </p>
-            </div>
-            <div className="rounded border border-line-soft bg-white p-5.5">
-              <h3 className="mb-2 text-[15px] font-extrabold">3. Evaluation &amp; reporting</h3>
-              <p className="text-[13.5px] text-ink-soft">
-                Compliance monitoring, performance dashboards, and stakeholder reporting on project
-                outcomes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-10 text-center">
-        <Button href="/completion-reporting" variant="ghost">
-          See how we report on completed work →
-        </Button>
-      </section>
-    </>
+    <DetailedSolutionPage
+      kicker="PROJECT MONITORING & EVALUATION"
+      headline="Know what's working, before it's too late to fix."
+      subheading="Structured monitoring and evaluation that keeps technology-driven projects on track, evidence-backed, and accountable."
+      heroPhoto="Photo: monitoring dashboard / field data collection"
+      overviewPhoto="Photo: field assessment in progress"
+      closingPhoto="Photo: stakeholder reporting session"
+      overview={[
+        "Deploying technology is not the same as delivering results. Project Monitoring & Evaluation (M&E) is how Covvert Technologies helps clients understand whether a deployed solution is actually performing — operationally, financially, and against the outcomes it was meant to achieve — and gives them the evidence to course-correct while there's still time to do so.",
+        "We combine field-based assessment with the technology-enabled monitoring made possible by the same IoT and connectivity solutions we deploy, so M&E isn't a separate afterthought bolted onto a project, but built into how the project runs.",
+      ]}
+      includes={[
+        {
+          title: "Monitoring frameworks",
+          desc: "clear indicators, data collection methods, and reporting cadences defined at project start, not retrofitted later",
+        },
+        {
+          title: "Progress & milestone tracking",
+          desc: "structured tracking against agreed project plans and delivery milestones",
+        },
+        {
+          title: "Performance measurement",
+          desc: "quantitative assessment of whether deployed systems are meeting their intended operational targets",
+        },
+        {
+          title: "Risk identification & mitigation",
+          desc: "early flagging of technical, operational, or delivery risks, with recommended mitigation actions",
+        },
+        {
+          title: "Data collection & analysis",
+          desc: "both field-based and technology-enabled (leveraging connected sensors and devices where deployed)",
+        },
+        {
+          title: "Quality assurance",
+          desc: "verification that installed systems and processes meet the specifications they were designed against",
+        },
+        {
+          title: "Compliance monitoring",
+          desc: "tracking adherence to donor, regulatory, or organizational requirements where applicable",
+        },
+        {
+          title: "Performance dashboards",
+          desc: "real-time or periodic visualizations that make project status legible to decision-makers, not buried in spreadsheets",
+        },
+        {
+          title: "Stakeholder reporting",
+          desc: "structured reporting tailored to the audience, from field teams to funders to executive boards",
+        },
+      ]}
+      approach={[
+        {
+          title: "Frame",
+          desc: "agree on what \"success\" looks like and how it will be measured, before implementation begins",
+        },
+        {
+          title: "Track",
+          desc: "ongoing structured data collection against the agreed framework, combining field assessment and technology-enabled monitoring",
+        },
+        {
+          title: "Analyze",
+          desc: "regular analysis to surface trends, risks, and deviations from plan early",
+        },
+        {
+          title: "Report",
+          desc: "clear, decision-ready reporting to stakeholders at the cadence they need",
+        },
+        {
+          title: "Adjust",
+          desc: "feed findings back into project delivery so monitoring changes outcomes, not just documents them",
+        },
+      ]}
+      whyItMatters="Projects that aren't monitored don't fail loudly — they drift quietly off track until the final report reveals a gap nobody caught in time. Structured M&E turns that failure mode into an early warning system."
+      whoThisIsFor="Development partners, NGOs, government agencies, and any organization delivering donor-funded or accountability-sensitive projects that require credible, evidence-based tracking of progress and performance."
+    />
   );
 }

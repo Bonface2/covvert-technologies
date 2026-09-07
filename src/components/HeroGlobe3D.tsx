@@ -115,8 +115,9 @@ export default function HeroGlobe3D() {
         texture.dispose();
         return;
       }
+      texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
       continentsTexture = texture;
-      continentsGeometry = new THREE.SphereGeometry(RADIUS * 1.001, 64, 48);
+      continentsGeometry = new THREE.SphereGeometry(RADIUS * 1.001, 96, 72);
       continentsMaterial = new THREE.MeshPhongMaterial({
         color: 0x9fc6ff,
         emissive: 0x050f1f,
