@@ -13,7 +13,6 @@ export default function SolutionMappingPage() {
       kicker="SOLUTION MAPPING"
       headline="Invest in the right technology, from day one."
       subheading="We help organizations identify, design, and validate the technology solutions that actually fit their operations — before a single shilling is spent on procurement."
-      heroPhoto="Photo: consultancy session / stakeholder interview"
       overviewPhoto="Photo: solution architecture / planning session"
       closingPhoto="Photo: team reviewing technical specifications"
       overview={[

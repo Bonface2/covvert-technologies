@@ -203,16 +203,42 @@ export default function HeroGlobe3D() {
     resizeObserver.observe(container);
     resize();
 
+    const rotationRef = { current: 0 };
+    const dragRef = { current: { dragging: false, startX: 0, startRotation: 0 } };
+
+    function onPointerDown(e: PointerEvent) {
+      dragRef.current = { dragging: true, startX: e.clientX, startRotation: rotationRef.current };
+      container!.style.cursor = "grabbing";
+    }
+    function onPointerMove(e: PointerEvent) {
+      if (!dragRef.current.dragging) return;
+      const deltaX = e.clientX - dragRef.current.startX;
+      rotationRef.current = dragRef.current.startRotation + deltaX * 0.01;
+    }
+    function onPointerUp() {
+      if (!dragRef.current.dragging) return;
+      dragRef.current.dragging = false;
+      if (container) container.style.cursor = "grab";
+    }
+    container.style.cursor = "grab";
+    container.addEventListener("pointerdown", onPointerDown);
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
+
     let frameId: number;
+    let lastElapsed = 0;
     const clock = new THREE.Clock();
 
     function animate() {
       frameId = requestAnimationFrame(animate);
       const elapsed = clock.getElapsedTime();
+      const delta = elapsed - lastElapsed;
+      lastElapsed = elapsed;
 
-      if (!prefersReducedMotion) {
-        globeGroup.rotation.y = elapsed * 0.18;
+      if (!prefersReducedMotion && !dragRef.current.dragging) {
+        rotationRef.current += delta * 0.18;
       }
+      globeGroup.rotation.y = rotationRef.current;
 
       arcLines.forEach(({ distanceAttr, baseDistances }, i) => {
         const shift = prefersReducedMotion ? 0 : elapsed * 0.6 + i * 0.3;
@@ -238,6 +264,9 @@ export default function HeroGlobe3D() {
       cancelled = true;
       cancelAnimationFrame(frameId);
       resizeObserver.disconnect();
+      container.removeEventListener("pointerdown", onPointerDown);
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
       renderer.dispose();
       bodyGeometry.dispose();
       bodyMaterial.dispose();
@@ -255,5 +284,5 @@ export default function HeroGlobe3D() {
     };
   }, []);
 
-  return <div ref={containerRef} className="h-full w-full" />;
+  return <div ref={containerRef} className="h-full w-full touch-none" />;
 }

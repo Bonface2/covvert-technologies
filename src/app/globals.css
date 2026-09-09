@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
   100% { r: 22; opacity: 0; }
 }
 
-.animate-marquee { animation: marquee-scroll 22s linear infinite; }
+.animate-marquee { animation: marquee-scroll 66s linear infinite; }
 .animate-globe { animation: globe-rotate 60s linear infinite; transform-origin: 200px 200px; }
 .animate-net-flow { animation: net-flow 3.6s linear infinite; }
 .animate-geo-ping { animation: geo-ping 3s ease-out infinite; transform-origin: center; }

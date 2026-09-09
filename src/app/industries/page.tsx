@@ -44,13 +44,23 @@ const industries: { icon: IndustryIconKey; title: string; desc: string }[] = [
 export default function IndustriesPage() {
   return (
     <>
-      <section className="px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="mb-2 text-xs font-bold text-ink-soft">INDUSTRIES</div>
-          <h1 className="max-w-[28ch] text-[28px] leading-[1.18] font-extrabold">
-            Industries we serve
+      <section
+        className="relative overflow-hidden px-6 pt-16 pb-14 text-white"
+        style={{
+          backgroundColor: "#002452",
+          backgroundImage:
+            "radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1.6px), linear-gradient(115deg, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(245deg, rgba(255,255,255,0.05) 1px, transparent 1px), radial-gradient(120% 140% at 85% 0%, #005ACC 0%, #003880 55%, #002452 100%)",
+          backgroundSize: "26px 26px, 52px 52px, 52px 52px, 100% 100%",
+        }}
+      >
+        <div className="mx-auto max-w-[1320px] px-8 md:px-12">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
+            INDUSTRIES
+          </span>
+          <h1 className="mt-6 max-w-[20ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
+            Industries we <span className="text-[#338DFF]">serve</span>
           </h1>
-          <p className="mt-3 max-w-[65ch] text-ink-soft">
+          <p className="mt-5 max-w-[65ch] text-[#C7D4EA]">
             COVVERT Technologies works across sectors, helping organisations harness technology,
             connectivity, data, and practical expertise to solve challenges, improve performance, and
             deliver measurable results.
@@ -58,12 +68,17 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="bg-canvas px-6 py-14">
-        <div className="mx-auto max-w-[1320px]">
+      <section className="px-6 py-10">
+        <div className="mx-auto max-w-[1320px] rounded border border-line-soft bg-white p-8 shadow-sm md:p-12">
           <div className="grid gap-5.5 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
-              <div key={industry.title} className="rounded border border-line-soft bg-white p-5.5">
-                <IndustryIcon icon={industry.icon} className="mb-3 h-6 w-6 text-accent" />
+              <div
+                key={industry.title}
+                className="rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
+              >
+                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft">
+                  <IndustryIcon icon={industry.icon} className="h-5 w-5 text-accent" />
+                </span>
                 <h3 className="mb-1.5 text-[15px] font-extrabold">{industry.title}</h3>
                 <p className="text-[13.5px] text-ink-soft">{industry.desc}</p>
               </div>
@@ -72,10 +87,16 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14 text-center">
-        <h2 className="text-xl font-bold">Not sure where your organization fits?</h2>
-        <div className="mt-4 flex justify-center">
+      <section className="bg-ink px-6 py-14 text-center text-white">
+        <h2 className="text-[28px] leading-[1.18] font-extrabold text-white">
+          Not sure where your organization fits?
+        </h2>
+        <p className="mt-2.5 text-[#B9BFC9]">Tell us what you&apos;re trying to build — we&apos;ll get back to you.</p>
+        <div className="mt-5.5 flex justify-center gap-3">
           <Button href="/contact">Request a Consultation</Button>
+          <Button href="/solutions" variant="secondary-light">
+            View Solutions &amp; Services
+          </Button>
         </div>
       </section>
     </>

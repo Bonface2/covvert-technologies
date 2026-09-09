@@ -13,7 +13,6 @@ export default function CompletionReportingPage() {
       kicker="COMPLETION REPORTING"
       headline="Close every project with clarity, not loose ends."
       subheading="Comprehensive completion reporting that documents what was delivered, what it achieved, and what should happen next."
-      heroPhoto="Photo/document preview: sample completion report"
       overviewPhoto="Photo: project handover / commissioning"
       closingPhoto="Photo: completed project site"
       overview={[

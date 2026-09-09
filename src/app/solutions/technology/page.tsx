@@ -13,7 +13,6 @@ export default function ConnectivitySolutionsPage() {
       kicker="CONNECTIVITY SOLUTIONS"
       headline="One SIM. Every network. No borders."
       subheading="Global IoT connectivity built on a cloud-native, distributed core — so your devices stay online, wherever they are."
-      heroPhoto="Photo: connectivity infrastructure / network operations"
       overviewPhoto="Photo: connected device in the field"
       closingPhoto="Photo: cross-border logistics or fleet in motion"
       overview={[

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-8 px-6 py-9 text-[13px] md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="mb-3.5">
-            <LogoMark />
+            <LogoMark size="h-10" />
           </div>
           <p className="mb-1.5 text-ink-soft">{contactDetails.address}</p>
           <p className="mb-1.5 text-ink-soft">{contactDetails.phones.join(" / ")}</p>

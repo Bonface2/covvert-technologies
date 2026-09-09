@@ -82,8 +82,10 @@ export default function HomePage() {
       <section
         className="relative overflow-hidden px-6 pb-21 pt-18 text-white"
         style={{
-          background:
-            "radial-gradient(120% 140% at 85% 0%, #005ACC 0%, #003880 55%, #002452 100%)",
+          backgroundColor: "#002452",
+          backgroundImage:
+            "radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1.6px), linear-gradient(115deg, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(245deg, rgba(255,255,255,0.05) 1px, transparent 1px), radial-gradient(120% 140% at 85% 0%, #005ACC 0%, #003880 55%, #002452 100%)",
+          backgroundSize: "26px 26px, 52px 52px, 52px 52px, 100% 100%",
         }}
       >
         <div className="mx-auto grid max-w-[1320px] items-center gap-2 md:grid-cols-2 md:gap-6">
