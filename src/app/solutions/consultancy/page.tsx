@@ -14,7 +14,9 @@ export default function SolutionMappingPage() {
       headline="Invest in the right technology, from day one."
       subheading="We help organizations identify, design, and validate the technology solutions that actually fit their operations — before a single shilling is spent on procurement."
       overviewPhoto="Photo: solution architecture / planning session"
+      overviewImage="/images/solutions/solution-mapping.png"
       closingPhoto="Photo: team reviewing technical specifications"
+      closingImage="/images/solutions/solution-mapping-closing.png"
       overview={[
         "Too many technology investments fail not because the hardware or software is bad, but because it was never the right fit to begin with. Solution Mapping is Covvert Technologies' answer to that problem: a structured, evidence-based process for understanding what an organization actually needs, and translating that into a clear, costed, implementable technology roadmap.",
         "We sit between the client's operational reality and the technology marketplace — independent of any single vendor — so that recommendations are driven by fit and outcomes, not by what happens to be easiest to sell.",

@@ -10,6 +10,7 @@ const SPOKES: City[] = [
   { name: "Kampala", lat: 0.31, lon: 32.58 },
   { name: "Dar es Salaam", lat: -6.79, lon: 39.28 },
   { name: "Kigali", lat: -1.94, lon: 30.06 },
+  { name: "Lusaka", lat: -15.39, lon: 28.32 },
   { name: "Addis Ababa", lat: 9.03, lon: 38.74 },
   { name: "Lagos", lat: 6.52, lon: 3.38 },
   { name: "Accra", lat: 5.6, lon: -0.19 },

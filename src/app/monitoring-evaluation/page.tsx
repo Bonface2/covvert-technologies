@@ -14,7 +14,9 @@ export default function MonitoringEvaluationPage() {
       headline="Know what's working, before it's too late to fix."
       subheading="Structured monitoring and evaluation that keeps technology-driven projects on track, evidence-backed, and accountable."
       overviewPhoto="Photo: field assessment in progress"
+      overviewImage="/images/solutions/monitoring-field.png"
       closingPhoto="Photo: stakeholder reporting session"
+      closingImage="/images/solutions/monitoring-session.png"
       overview={[
         "Deploying technology is not the same as delivering results. Project Monitoring & Evaluation (M&E) is how Covvert Technologies helps clients understand whether a deployed solution is actually performing — operationally, financially, and against the outcomes it was meant to achieve — and gives them the evidence to course-correct while there's still time to do so.",
         "We combine field-based assessment with the technology-enabled monitoring made possible by the same IoT and connectivity solutions we deploy, so M&E isn't a separate afterthought bolted onto a project, but built into how the project runs.",

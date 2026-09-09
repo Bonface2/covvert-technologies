@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Button from "@/components/Button";
 import Placeholder from "@/components/Placeholder";
 
@@ -8,7 +9,15 @@ export const metadata: Metadata = {
     "Solution mapping, IoT hardware sourcing & supply, connectivity solutions, project monitoring & evaluation, and completion reporting from Covvert Technologies.",
 };
 
-const rows = [
+const rows: {
+  tag: string;
+  title: string;
+  desc: string;
+  href: string;
+  cta: string;
+  photo: string;
+  image?: string;
+}[] = [
   {
     tag: "Solution Mapping",
     title: "Invest in the right technology, from day one",
@@ -16,6 +25,7 @@ const rows = [
     href: "/solutions/consultancy",
     cta: "See Solution Mapping",
     photo: "Photo: consultancy / solution in use",
+    image: "/images/solutions/solution-mapping.png",
   },
   {
     tag: "IoT Hardware",
@@ -24,6 +34,7 @@ const rows = [
     href: "/iot-hardware",
     cta: "See IoT Hardware Sourcing & Supply",
     photo: "Photo: IoT hardware / device in the field",
+    image: "/images/iot-hardware/fleet-tracking.png",
   },
   {
     tag: "Connectivity",
@@ -32,6 +43,7 @@ const rows = [
     href: "/solutions/technology",
     cta: "See Connectivity Solutions",
     photo: "Photo: technology / connectivity solution in use",
+    image: "/images/solutions/connectivity-network.png",
   },
   {
     tag: "Monitoring",
@@ -40,6 +52,7 @@ const rows = [
     href: "/monitoring-evaluation",
     cta: "See Project Monitoring & Evaluation",
     photo: "Photo: monitoring dashboard / field data collection",
+    image: "/images/solutions/monitoring-field.png",
   },
   {
     tag: "Reporting",
@@ -87,7 +100,13 @@ export default function SolutionsPage() {
             >
               <div className="grid items-center gap-9 md:grid-cols-2">
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <Placeholder label={row.photo} className="h-[260px]" />
+                  {row.image ? (
+                    <div className="relative h-[260px] overflow-hidden rounded border border-line-soft">
+                      <Image src={row.image} alt={row.photo} fill className="object-cover" />
+                    </div>
+                  ) : (
+                    <Placeholder label={row.photo} className="h-[260px]" />
+                  )}
                 </div>
                 <div>
                   <div className="mb-2.5 inline-block rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-bold text-accent">

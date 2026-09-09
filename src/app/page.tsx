@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/Button";
+import CountUpStat from "@/components/CountUpStat";
 import HeroGlobe3D from "@/components/HeroGlobe3D";
 import LogoMarquee from "@/components/LogoMarquee";
 import SolutionIcon from "@/components/SolutionIcon";
@@ -102,12 +103,22 @@ export default function HomePage() {
             </div>
             <div className="mt-10 flex gap-6 sm:gap-10">
               <div>
-                <b className="block text-3xl text-white">5</b>
+                <b className="block text-3xl text-white">
+                  <CountUpStat end={5} />
+                </b>
                 <span className="text-xs text-[#8FA0BF]">COUNTRIES SERVED</span>
               </div>
               <div>
-                <b className="block text-3xl text-white">24/7</b>
+                <b className="block text-3xl text-white">
+                  <CountUpStat end={24} suffix="/7" />
+                </b>
                 <span className="text-xs text-[#8FA0BF]">FIELD SUPPORT</span>
+              </div>
+              <div>
+                <b className="block text-3xl text-white">
+                  <CountUpStat end={2023} />
+                </b>
+                <span className="text-xs text-[#8FA0BF]">ACTIVE SINCE</span>
               </div>
             </div>
           </div>
@@ -175,10 +186,7 @@ export default function HomePage() {
         <h2 className="text-[28px] leading-[1.18] font-extrabold text-white">Have a project in mind?</h2>
         <p className="mt-2.5 text-[#B9BFC9]">Tell us what you&apos;re trying to build — we&apos;ll get back to you.</p>
         <div className="mt-5.5 flex justify-center gap-3">
-          <Button href="/contact">Contact Us</Button>
-          <Button href="/contact" variant="secondary-light">
-            Send an Enquiry
-          </Button>
+          <Button href="/contact">Send an Enquiry</Button>
         </div>
       </section>
     </>

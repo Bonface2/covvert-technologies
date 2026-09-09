@@ -422,14 +422,18 @@ export default function IotHardwareCataloguePage() {
 
             <div className="mt-7 flex flex-col gap-9">
               {cat.brands.map((b) => (
-                <div key={b.brand} className="grid gap-5 sm:grid-cols-[160px_1fr]">
-                  <div>
-                    <div className="relative h-[160px] overflow-hidden rounded border border-line-soft bg-[#F6F7F9]">
-                      <Image src={b.image} alt={b.imageProduct} fill className="object-cover" />
+                <div key={b.brand}>
+                  <h3 className="mb-3 inline-block rounded-full bg-accent-soft px-3 py-1 text-[12px] font-extrabold text-accent">
+                    {b.brand}
+                  </h3>
+                  <div className="grid gap-5 sm:grid-cols-[160px_1fr]">
+                    <div>
+                      <div className="relative h-[160px] overflow-hidden rounded border border-line-soft bg-[#F6F7F9]">
+                        <Image src={b.image} alt={b.imageProduct} fill className="object-cover" />
+                      </div>
+                      <p className="mt-1.5 text-center text-[11px] font-bold text-accent">{b.imageProduct}</p>
                     </div>
-                    <p className="mt-1.5 text-center text-[11px] font-bold text-accent">{b.imageProduct}</p>
-                  </div>
-                  <div className="overflow-x-auto">
+                    <div className="overflow-x-auto">
                     <table className="w-full min-w-[420px] border-collapse text-left text-[13px]">
                       <thead>
                         <tr className="border-b border-line-soft text-[11px] font-bold text-ink-soft">
@@ -466,6 +470,7 @@ export default function IotHardwareCataloguePage() {
                         ))}
                       </tbody>
                     </table>
+                    </div>
                   </div>
                 </div>
               ))}

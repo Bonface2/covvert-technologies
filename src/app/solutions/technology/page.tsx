@@ -14,7 +14,9 @@ export default function ConnectivitySolutionsPage() {
       headline="One SIM. Every network. No borders."
       subheading="Global IoT connectivity built on a cloud-native, distributed core — so your devices stay online, wherever they are."
       overviewPhoto="Photo: connected device in the field"
+      overviewImage="/images/solutions/connectivity-network.png"
       closingPhoto="Photo: cross-border logistics or fleet in motion"
+      closingImage="/images/solutions/connectivity-fleet.png"
       overview={[
         "Connectivity is often the weakest link in an IoT deployment — and traditional cellular roaming makes it worse, adding latency, cost, and single-points-of-failure by routing traffic back through a device's home network no matter where it physically is. Covvert Technologies' connectivity solution takes a fundamentally different approach: a cloud-native, distributed core network with local points of presence (PoPs) around the world, so devices connect to infrastructure that's actually close to them.",
         "Each SIM we deploy carries multiple operator profiles (IMSIs) and autonomously switches between available mobile networks — with no manual intervention and no device downtime — keeping connected assets online across multiple African countries on a single SIM.",
