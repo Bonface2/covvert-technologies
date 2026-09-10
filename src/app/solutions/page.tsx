@@ -61,6 +61,7 @@ const rows: {
     href: "/completion-reporting",
     cta: "See Completion Reporting",
     photo: "Photo/document preview: sample completion report",
+    image: "/images/solutions/project-handover.png",
   },
 ];
 

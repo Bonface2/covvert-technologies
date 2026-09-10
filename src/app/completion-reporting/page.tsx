@@ -14,7 +14,9 @@ export default function CompletionReportingPage() {
       headline="Close every project with clarity, not loose ends."
       subheading="Comprehensive completion reporting that documents what was delivered, what it achieved, and what should happen next."
       overviewPhoto="Photo: project handover / commissioning"
+      overviewImage="/images/solutions/project-handover.png"
       closingPhoto="Photo: completed project site"
+      closingImage="/images/solutions/completed-site.png"
       overview={[
         "How a project ends shapes what an organization can prove, learn, and build on afterward. Completion Reporting is where Covvert Technologies brings a project to a formal, well-documented close — producing the records, verifications, and analysis that clients need for accountability, audit, and institutional memory.",
         "This isn't a formality tacked onto the end of a project. Done well, completion reporting is what turns a single deployment into reusable organizational knowledge.",
