@@ -46,7 +46,7 @@ const industries: { icon: IndustryIconKey; title: string; desc: string }[] = [
 
 const glanceStats: { icon: StatIconKey; value: string; label: string }[] = [
   { icon: "calendar", value: "2023", label: "FOUNDED IN NAIROBI" },
-  { icon: "globe", value: "5", label: "COUNTRIES SERVED" },
+  { icon: "globe", value: "10+", label: "COUNTRIES SERVED" },
   { icon: "sectors", value: String(industries.length), label: "SECTORS SERVED" },
   { icon: "clock", value: "24/7", label: "FIELD SUPPORT" },
 ];
@@ -86,10 +86,13 @@ export default function AboutPage() {
             ABOUT COVVERT TECHNOLOGIES
           </span>
           <div className="mt-6 grid gap-9 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <h1 className="text-5xl leading-[1.08] font-extrabold text-white md:text-[56px]">
-              Turning Challenges into <span className="text-[#338DFF]">Smart Solutions</span> and
-              Measurable Results
-            </h1>
+            <div>
+              <h1 className="text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">About Us</h1>
+              <p className="mt-3 max-w-[22ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">
+                Turning Challenges into <span className="text-[#338DFF]">Smart Solutions</span> and
+                Measurable Results
+              </p>
+            </div>
             <div>
               <p className="text-[#C7D4EA]">
                 Covvert Technologies connects technology, connectivity, and insight to transform

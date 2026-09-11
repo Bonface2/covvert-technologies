@@ -104,7 +104,7 @@ export default function HomePage() {
             <div className="mt-10 flex gap-6 sm:gap-10">
               <div>
                 <b className="block text-3xl text-white">
-                  <CountUpStat end={5} />
+                  <CountUpStat end={10} suffix="+" />
                 </b>
                 <span className="text-xs text-[#8FA0BF]">COUNTRIES SERVED</span>
               </div>
@@ -113,12 +113,6 @@ export default function HomePage() {
                   <CountUpStat end={24} suffix="/7" />
                 </b>
                 <span className="text-xs text-[#8FA0BF]">FIELD SUPPORT</span>
-              </div>
-              <div>
-                <b className="block text-3xl text-white">
-                  <CountUpStat end={2023} />
-                </b>
-                <span className="text-xs text-[#8FA0BF]">ACTIVE SINCE</span>
               </div>
             </div>
           </div>

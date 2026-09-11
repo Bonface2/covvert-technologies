@@ -11,6 +11,7 @@ export default function MonitoringEvaluationPage() {
   return (
     <DetailedSolutionPage
       kicker="PROJECT MONITORING & EVALUATION"
+      title="Project Monitoring & Evaluation"
       headline="Know what's working, before it's too late to fix."
       subheading="Structured monitoring and evaluation that keeps technology-driven projects on track, evidence-backed, and accountable."
       overviewPhoto="Photo: field assessment in progress"

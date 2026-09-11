@@ -81,10 +81,13 @@ export default function SolutionsPage() {
           <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
             SOLUTIONS &amp; SERVICES
           </span>
-          <h1 className="mt-6 max-w-[30ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
+          <h1 className="mt-6 text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">
+            Solutions &amp; Services
+          </h1>
+          <p className="mt-3 max-w-[46ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">
             We don&apos;t simply sell technology. We help you move from challenges to{" "}
             <span className="text-[#338DFF]">connected solutions</span>.
-          </h1>
+          </p>
           <p className="mt-5 max-w-[60ch] text-[#C7D4EA]">
             From solutions to data, and from data to measurable results. Every area below has its own
             page with full detail.

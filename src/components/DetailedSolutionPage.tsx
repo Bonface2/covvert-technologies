@@ -60,6 +60,7 @@ function UsersIcon({ className = "h-5 w-5" }: { className?: string }) {
 
 export default function DetailedSolutionPage({
   kicker,
+  title,
   headline,
   subheading,
   overview,
@@ -74,6 +75,7 @@ export default function DetailedSolutionPage({
   children,
 }: {
   kicker: string;
+  title: string;
   headline: string;
   subheading: string;
   overview: string[];
@@ -102,10 +104,11 @@ export default function DetailedSolutionPage({
           <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
             {kicker}
           </span>
-          <h1 className="mt-6 max-w-[20ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
+          <h1 className="mt-6 text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">{title}</h1>
+          <p className="mt-3 max-w-[46ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">
             {headline}
-          </h1>
-          <p className="mt-5 max-w-[62ch] text-[#C7D4EA]">{subheading}</p>
+          </p>
+          <p className="mt-4 max-w-[62ch] text-[#C7D4EA]">{subheading}</p>
           <div className="mt-7">
             <Button href="/contact">Request a Consultation</Button>
           </div>
