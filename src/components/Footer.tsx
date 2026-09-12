@@ -11,10 +11,10 @@ export default function Footer() {
     <footer className="border-t border-line-soft">
       <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-10 px-6 py-11 text-[13px] md:grid-cols-[1.2fr_1fr_1fr_1.1fr]">
         <div>
-          <div className="mb-4">
+          <div className="mb-4 flex justify-center md:justify-start">
             <LogoMark size="h-16" />
           </div>
-          <p className="max-w-[28ch] text-[15px] leading-relaxed text-ink-soft">
+          <p className="mx-auto max-w-[28ch] text-center text-[15px] leading-relaxed text-ink-soft md:mx-0 md:text-left">
             Technology, <span className="font-semibold text-ink">connected to outcomes.</span>
           </p>
         </div>
