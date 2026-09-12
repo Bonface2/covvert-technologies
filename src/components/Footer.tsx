@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LogoMark from "./LogoMark";
 import Button from "./Button";
+import { PinIcon, PhoneIcon, MailIcon } from "./ContactIcons";
 import { contactDetails, solutionLinks } from "@/lib/nav";
 
 const footerLink = "mb-2 block text-ink-soft hover:text-ink transition-colors";
@@ -10,10 +11,10 @@ export default function Footer() {
     <footer className="border-t border-line-soft">
       <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-10 px-6 py-11 text-[13px] md:grid-cols-[1.2fr_1fr_1fr_1.1fr]">
         <div>
-          <div className="mb-3.5">
-            <LogoMark size="h-10" />
+          <div className="mb-4">
+            <LogoMark size="h-16" />
           </div>
-          <p className="max-w-[26ch] text-ink-soft">
+          <p className="max-w-[28ch] text-[15px] leading-relaxed text-ink-soft">
             Technology, <span className="font-semibold text-ink">connected to outcomes.</span>
           </p>
         </div>
@@ -46,10 +47,27 @@ export default function Footer() {
 
         <div>
           <h4 className="mb-3 text-xs font-bold uppercase tracking-wide text-ink">Get in touch</h4>
-          <p className="mb-1.5 text-ink-soft">{contactDetails.address}</p>
-          <p className="mb-1.5 text-ink-soft">{contactDetails.phones.join(" / ")}</p>
-          <p className="mb-4 text-ink-soft">{contactDetails.email}</p>
-          <Button href="/contact" className="!px-4.5 !py-2.5 !text-[13px]">
+          <div className="flex flex-col gap-2.5">
+            <div className="flex items-center gap-2.5 text-ink-soft">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                <PinIcon className="h-3.5 w-3.5" />
+              </span>
+              {contactDetails.address}
+            </div>
+            <div className="flex items-center gap-2.5 text-ink-soft">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                <PhoneIcon className="h-3.5 w-3.5" />
+              </span>
+              {contactDetails.phones.join(" / ")}
+            </div>
+            <div className="flex items-center gap-2.5 text-ink-soft">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+                <MailIcon className="h-3.5 w-3.5" />
+              </span>
+              {contactDetails.email}
+            </div>
+          </div>
+          <Button href="/contact" className="mt-4 !px-4.5 !py-2.5 !text-[13px]">
             Request a Consultation
           </Button>
         </div>
