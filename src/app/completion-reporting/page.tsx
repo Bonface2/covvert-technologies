@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function CompletionReportingPage() {
   return (
     <DetailedSolutionPage
-      kicker="COMPLETION REPORTING"
       title="Completion Reporting"
-      headline="Close every project with clarity, not loose ends."
-      subheading="Comprehensive completion reporting that documents what was delivered, what it achieved, and what should happen next."
       overviewPhoto="Photo: project handover / commissioning"
       overviewImage="/images/solutions/project-handover.png"
       closingPhoto="Photo: completed project site"

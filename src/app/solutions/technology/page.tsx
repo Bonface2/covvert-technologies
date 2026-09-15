@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function ConnectivitySolutionsPage() {
   return (
     <DetailedSolutionPage
-      kicker="CONNECTIVITY SOLUTIONS"
       title="Connectivity Solutions"
-      headline="One SIM. Every network. No borders."
-      subheading="Global IoT connectivity built on a cloud-native, distributed core — so your devices stay online, wherever they are."
       overviewPhoto="Photo: connected device in the field"
       overviewImage="/images/solutions/connectivity-network.png"
       closingPhoto="Photo: cross-border logistics or fleet in motion"

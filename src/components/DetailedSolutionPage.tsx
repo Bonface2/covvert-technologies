@@ -59,10 +59,7 @@ function UsersIcon({ className = "h-5 w-5" }: { className?: string }) {
 }
 
 export default function DetailedSolutionPage({
-  kicker,
   title,
-  headline,
-  subheading,
   overview,
   overviewPhoto,
   overviewImage,
@@ -74,10 +71,7 @@ export default function DetailedSolutionPage({
   closingImage,
   children,
 }: {
-  kicker: string;
   title: string;
-  headline: string;
-  subheading: string;
   overview: string[];
   overviewPhoto: string;
   overviewImage?: string;
@@ -101,14 +95,7 @@ export default function DetailedSolutionPage({
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8 md:px-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
-            {kicker}
-          </span>
-          <h1 className="mt-6 text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">{title}</h1>
-          <p className="mt-3 max-w-[46ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">
-            {headline}
-          </p>
-          <p className="mt-4 max-w-[62ch] text-[#C7D4EA]">{subheading}</p>
+          <h1 className="text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">{title}</h1>
           <div className="mt-7">
             <Button href="/contact">Request a Consultation</Button>
           </div>

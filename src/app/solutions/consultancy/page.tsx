@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function SolutionMappingPage() {
   return (
     <DetailedSolutionPage
-      kicker="SOLUTION MAPPING"
       title="Solution Mapping"
-      headline="Invest in the right technology, from day one."
-      subheading="We help organizations identify, design, and validate the technology solutions that actually fit their operations — before a single shilling is spent on procurement."
       overviewPhoto="Photo: solution architecture / planning session"
       overviewImage="/images/solutions/solution-mapping.png"
       closingPhoto="Photo: team reviewing technical specifications"

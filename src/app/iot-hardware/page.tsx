@@ -52,10 +52,7 @@ const deviceCategories = [
 export default function IotHardwarePage() {
   return (
     <DetailedSolutionPage
-      kicker="IOT HARDWARE SOURCING & SUPPLY"
       title="IoT Hardware Sourcing & Supply"
-      headline="The right devices, sourced right, supported for the long run."
-      subheading="We source, supply, and support high-quality IoT hardware — matched to your environment, not just your spec sheet."
       overviewPhoto="Photo: field installation / commissioning"
       overviewImage="/images/iot-hardware/field-devices-connectivity.png"
       closingPhoto="Photo: technician servicing IoT hardware"
