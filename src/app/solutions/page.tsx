@@ -78,10 +78,7 @@ export default function SolutionsPage() {
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8 md:px-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
-            SOLUTIONS &amp; SERVICES
-          </span>
-          <h1 className="mt-6 text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">
+          <h1 className="text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">
             Solutions &amp; Services
           </h1>
           <p className="mt-3 max-w-[46ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import LogoMark from "./LogoMark";
 import Button from "./Button";
 import { PinIcon, PhoneIcon, MailIcon } from "./ContactIcons";
-import { contactDetails, solutionLinks } from "@/lib/nav";
+import { contactDetails, industryLinks, solutionLinks } from "@/lib/nav";
 
 const footerLink = "mb-2 block text-ink-soft hover:text-ink transition-colors";
 
@@ -43,6 +43,11 @@ export default function Footer() {
           <Link href="/industries" className={footerLink}>
             Industries
           </Link>
+          {industryLinks.map((link) => (
+            <Link key={link.href} href={link.href} className={`${footerLink} pl-3 text-[12px]`}>
+              ↳ {link.title}
+            </Link>
+          ))}
         </div>
 
         <div>

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import Placeholder from "@/components/Placeholder";
+import ApproachSteps from "@/components/ApproachSteps";
 
-type ListItem = { title: string; desc: string };
+type ListItem = { title: string; desc: string; icon?: string };
 
 function CheckIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
@@ -133,13 +134,18 @@ export default function DetailedSolutionPage({
             {includes.map((item) => (
               <div
                 key={item.title}
-                className="rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
+                className="group relative overflow-hidden rounded border border-line-soft bg-white p-5.5 transition-all duration-200 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
               >
-                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft">
-                  <CheckIcon className="h-5 w-5 text-accent" />
-                </span>
+                <span className="absolute inset-x-0 top-0 h-[3px] scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100" />
+                {item.icon ? (
+                  <Image src={item.icon} alt="" width={56} height={56} className="mb-3.5 h-14 w-14" />
+                ) : (
+                  <span className="mb-3.5 flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft transition-colors duration-200 group-hover:bg-accent">
+                    <CheckIcon className="h-5.5 w-5.5 text-accent transition-colors duration-200 group-hover:text-white" />
+                  </span>
+                )}
                 <h3 className="mb-1.5 text-[15px] font-extrabold">{item.title}</h3>
-                <p className="text-[13.5px] text-ink-soft">{item.desc}</p>
+                <p className="text-[13.5px] text-ink-soft first-letter:uppercase">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -149,20 +155,7 @@ export default function DetailedSolutionPage({
       <section className="px-6 py-10">
         <div className="mx-auto max-w-[1320px] rounded border border-line-soft bg-white p-8 shadow-sm md:p-12">
           <h2 className="text-xl font-extrabold">Our approach</h2>
-          <div className="mt-6 grid gap-5.5 sm:grid-cols-2 lg:grid-cols-3">
-            {approach.map((step, i) => (
-              <div
-                key={step.title}
-                className="rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
-              >
-                <span className="mb-3 flex h-7 w-7 items-center justify-center rounded-full bg-accent-soft text-[13px] font-bold text-accent">
-                  {i + 1}
-                </span>
-                <h3 className="mb-1.5 text-[15px] font-extrabold">{step.title}</h3>
-                <p className="text-[13.5px] text-ink-soft">{step.desc}</p>
-              </div>
-            ))}
-          </div>
+          <ApproachSteps steps={approach} />
         </div>
       </section>
 

@@ -65,42 +65,52 @@ export default function IotHardwarePage() {
           {
             title: "Environmental monitoring sensors",
             desc: "air quality, weather, soil, and ecological monitoring equipment for climate and environmental programs",
+          icon: "/images/icons/iot-hardware/devices-sensors.png",
           },
           {
             title: "Water level & quality sensors",
             desc: "for water resource management, flood early-warning, and WASH (water, sanitation and hygiene) programs",
+          icon: "/images/icons/iot-hardware/devices-sensors.png",
           },
           {
             title: "Smart agriculture devices",
             desc: "soil moisture, irrigation control, and crop-monitoring sensors for precision agriculture",
+          icon: "/images/icons/iot-hardware/ruggedized-hardware.png",
           },
           {
             title: "Energy & smart metering",
             desc: "smart meters and energy-monitoring devices for utilities and off-grid energy providers",
+          icon: "/images/icons/iot-hardware/monitoring-analytics.png",
           },
           {
             title: "Asset tracking & GPS devices",
             desc: "for fleet management, logistics, and high-value asset protection",
+          icon: "/images/icons/iot-hardware/connectivity-networks.png",
           },
           {
             title: "Industrial monitoring sensors",
             desc: "vibration, temperature, and equipment-condition sensors for predictive maintenance",
+          icon: "/images/icons/iot-hardware/ruggedized-hardware.png",
           },
           {
             title: "IoT gateways & communication hardware",
             desc: "the connective layer that gets field data reliably from sensor to cloud",
+          icon: "/images/icons/iot-hardware/connectivity-networks.png",
           },
           {
             title: "Installation & commissioning",
             desc: "professional, field-tested installation, not just drop-shipped boxes",
+          icon: "/images/icons/iot-hardware/installation-support.png",
           },
           {
             title: "Systems integration support",
             desc: "ensuring hardware talks correctly to dashboards, databases, and existing enterprise systems",
+          icon: "/images/icons/iot-hardware/integration-apis.png",
           },
           {
             title: "Technical support & maintenance",
             desc: "ongoing hardware support so devices keep reporting long after go-live",
+          icon: "/images/icons/iot-hardware/installation-support.png",
           },
         ]}
         approach={[

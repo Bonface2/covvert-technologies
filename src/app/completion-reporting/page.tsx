@@ -23,38 +23,47 @@ export default function CompletionReportingPage() {
         {
           title: "Project completion reports",
           desc: "comprehensive documentation of what was delivered, against what was originally scoped and budgeted",
+          icon: "/images/icons/completion-reporting/project-completion-reports.png",
         },
         {
           title: "Asset verification reports",
           desc: "physical and digital verification that installed hardware and systems match procurement and deployment records",
+          icon: "/images/icons/completion-reporting/asset-verification-reports.png",
         },
         {
           title: "Commissioning documentation",
           desc: "formal records confirming that systems were tested, accepted, and handed over correctly",
+          icon: "/images/icons/completion-reporting/commissioning-documentation.png",
         },
         {
           title: "Performance evaluations",
           desc: "assessment of how the completed project performed against its original objectives",
+          icon: "/images/icons/completion-reporting/performance-evaluations.png",
         },
         {
           title: "Financial utilization summaries",
           desc: "clear accounting of how project funds were used, structured for audit and donor review",
+          icon: "/images/icons/completion-reporting/financial-utilization-summaries.png",
         },
         {
           title: "Lessons learned",
           desc: "structured capture of what worked, what didn't, and what should be done differently next time",
+          icon: "/images/icons/completion-reporting/lessons-learned.png",
         },
         {
           title: "Compliance documentation",
           desc: "records demonstrating adherence to relevant regulatory, donor, or organizational requirements",
+          icon: "/images/icons/completion-reporting/compliance-documentation.png",
         },
         {
           title: "Handover reports",
           desc: "everything the receiving team or department needs to take ownership of a completed system with confidence",
+          icon: "/images/icons/completion-reporting/handover-reports.png",
         },
         {
           title: "Sustainability assessments",
           desc: "an honest look at whether the delivered solution is positioned to keep running, and what's needed to keep it that way",
+          icon: "/images/icons/completion-reporting/sustainability-assessments.png",
         },
       ]}
       approach={[

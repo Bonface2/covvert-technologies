@@ -24,10 +24,7 @@ export default function ContactPage() {
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8 md:px-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
-            CONTACT US
-          </span>
-          <h1 className="mt-6 max-w-[16ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
+          <h1 className="max-w-[16ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
             Get in <span className="text-[#338DFF]">touch</span>
           </h1>
           <p className="mt-5 max-w-[46ch] text-[#C7D4EA]">

@@ -23,26 +23,32 @@ export default function ConnectivitySolutionsPage() {
         {
           title: "Cloud-native distributed core network",
           desc: "traffic is processed through local infrastructure rather than being backhauled through a single national core, reducing latency and improving resilience",
+          icon: "/images/icons/connectivity/cloud-native-core.png",
         },
         {
           title: "Local points of presence (PoPs)",
           desc: "regional infrastructure that keeps device connections local, fast, and less dependent on any single network path",
+          icon: "/images/icons/connectivity/points-of-presence.png",
         },
         {
           title: "Multi-IMSI SIMs",
           desc: "each SIM carries multiple operator profiles rather than being locked to a single carrier",
+          icon: "/images/icons/connectivity/multi-imsi-sims.png",
         },
         {
           title: "Autonomous network switching",
           desc: "the platform selects and switches between available mobile networks automatically, based on signal quality and availability, with zero manual reconfiguration",
+          icon: "/images/icons/connectivity/network-switching.png",
         },
         {
           title: "Cross-border coverage",
           desc: "one SIM stays connected as assets move across multiple African countries, without swapping hardware or renegotiating contracts per country",
+          icon: "/images/icons/connectivity/cross-border-coverage.png",
         },
         {
           title: "Real-time connectivity management",
           desc: "visibility and control over connected devices and their network status from a single platform",
+          icon: "/images/icons/connectivity/connectivity-management.png",
         },
       ]}
       approach={[

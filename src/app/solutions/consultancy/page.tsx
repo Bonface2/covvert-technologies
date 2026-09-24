@@ -23,30 +23,37 @@ export default function SolutionMappingPage() {
         {
           title: "Needs assessments",
           desc: "structured stakeholder interviews, site visits, and operational reviews to surface the real problem, not just the stated one",
+          icon: "/images/icons/solution-mapping-includes/needs-assessments.png",
         },
         {
           title: "Business process analysis",
           desc: "mapping current workflows to identify inefficiencies, bottlenecks, and where technology can create leverage",
+          icon: "/images/icons/solution-mapping-includes/business-process-analysis.png",
         },
         {
           title: "Solution architecture & design",
           desc: "translating requirements into a coherent technical architecture, including system components, data flows, and integration points",
+          icon: "/images/icons/solution-mapping-includes/solution-architecture-design.png",
         },
         {
           title: "Infrastructure planning",
           desc: "assessing power, connectivity, physical siting, and environmental constraints that will shape what's actually deployable",
+          icon: "/images/icons/solution-mapping-includes/infrastructure-planning.png",
         },
         {
           title: "Technical specifications",
           desc: "vendor-neutral, procurement-ready specifications that let clients tender competitively without being locked into one supplier's ecosystem",
+          icon: "/images/icons/solution-mapping-includes/technical-specifications.png",
         },
         {
           title: "Cost-benefit analysis",
           desc: "modelling total cost of ownership against expected operational or financial return, so decisions are made with eyes open",
+          icon: "/images/icons/solution-mapping-includes/cost-benefit-analysis.png",
         },
         {
           title: "Implementation roadmaps",
           desc: "phased rollout plans that sequence deployment realistically against budget cycles, staffing, and risk",
+          icon: "/images/icons/solution-mapping-includes/implementation-roadmaps.png",
         },
       ]}
       approach={[

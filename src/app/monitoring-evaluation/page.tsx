@@ -23,38 +23,47 @@ export default function MonitoringEvaluationPage() {
         {
           title: "Monitoring frameworks",
           desc: "clear indicators, data collection methods, and reporting cadences defined at project start, not retrofitted later",
+          icon: "/images/icons/monitoring-evaluation/results-framework.png",
         },
         {
           title: "Progress & milestone tracking",
           desc: "structured tracking against agreed project plans and delivery milestones",
+          icon: "/images/icons/monitoring-evaluation/continuous-improvement.png",
         },
         {
           title: "Performance measurement",
           desc: "quantitative assessment of whether deployed systems are meeting their intended operational targets",
+          icon: "/images/icons/monitoring-evaluation/impact-evaluation.png",
         },
         {
           title: "Risk identification & mitigation",
           desc: "early flagging of technical, operational, or delivery risks, with recommended mitigation actions",
+          icon: "/images/icons/monitoring-evaluation/compliance-quality.png",
         },
         {
           title: "Data collection & analysis",
           desc: "both field-based and technology-enabled (leveraging connected sensors and devices where deployed)",
+          icon: "/images/icons/monitoring-evaluation/data-collection.png",
         },
         {
           title: "Quality assurance",
           desc: "verification that installed systems and processes meet the specifications they were designed against",
+          icon: "/images/icons/monitoring-evaluation/continuous-improvement.png",
         },
         {
           title: "Compliance monitoring",
           desc: "tracking adherence to donor, regulatory, or organizational requirements where applicable",
+          icon: "/images/icons/monitoring-evaluation/compliance-quality.png",
         },
         {
           title: "Performance dashboards",
           desc: "real-time or periodic visualizations that make project status legible to decision-makers, not buried in spreadsheets",
+          icon: "/images/icons/monitoring-evaluation/data-analysis.png",
         },
         {
           title: "Stakeholder reporting",
           desc: "structured reporting tailored to the audience, from field teams to funders to executive boards",
+          icon: "/images/icons/monitoring-evaluation/stakeholder-engagement.png",
         },
       ]}
       approach={[

@@ -1,3 +1,5 @@
+import type { IndustryIconKey } from "@/components/IndustryIcon";
+
 export type SolutionLink = {
   href: string;
   title: string;
@@ -39,6 +41,17 @@ export const solutionLinks: SolutionLink[] = [
 ];
 
 export const solutionPaths = solutionLinks.map((l) => l.href).concat("/solutions");
+
+export const industryLinks: { href: string; title: string; blurb: string; icon: IndustryIconKey }[] = [
+  { href: "/industries/logistics", title: "Logistics & Transport", blurb: "Fleet, cargo and asset visibility", icon: "logistics" },
+  { href: "/industries/infrastructure", title: "Infrastructure & Construction", blurb: "Connected monitoring for sites and structures", icon: "infrastructure" },
+  { href: "/industries/agriculture", title: "Agriculture & Agribusiness", blurb: "Smart sensors for farms and agribusiness", icon: "agriculture" },
+  { href: "/industries/government", title: "Government & Public Sector", blurb: "Technology and accountability reporting", icon: "government" },
+  { href: "/industries/development", title: "Development & Humanitarian", blurb: "Credible M&E for programmes", icon: "development" },
+  { href: "/industries/energy", title: "Energy & Mining", blurb: "Remote monitoring for distributed sites", icon: "energy" },
+];
+
+export const industryPaths = industryLinks.map((l) => l.href).concat("/industries");
 
 export const contactDetails = {
   address: "Covvert Technologies Ltd, Nairobi, Kenya",

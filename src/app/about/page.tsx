@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Button from "@/components/Button";
-import IndustryIcon, { type IndustryIconKey } from "@/components/IndustryIcon";
+import { type IndustryIconKey } from "@/components/IndustryIcon";
 import ValueIcon, { type ValueIconKey } from "@/components/ValueIcon";
 import StatIcon, { type StatIconKey } from "@/components/StatIcon";
 
@@ -82,10 +82,7 @@ export default function AboutPage() {
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8 md:px-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
-            ABOUT COVVERT TECHNOLOGIES
-          </span>
-          <div className="mt-6 grid gap-9 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+          <div className="grid gap-9 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <div>
               <h1 className="text-5xl leading-[1.05] font-extrabold text-white md:text-[64px]">About Us</h1>
               <p className="mt-3 max-w-[22ch] text-xl font-semibold leading-snug text-[#C7D4EA] md:text-2xl">
@@ -261,9 +258,13 @@ export default function AboutPage() {
                 key={industry.title}
                 className="rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
               >
-                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft">
-                  <IndustryIcon icon={industry.icon} className="h-5 w-5 text-accent" />
-                </span>
+                <Image
+                  src={`/images/icons/industries/${industry.icon}.png`}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="mb-3 h-16 w-16"
+                />
                 <h3 className="mb-1.5 text-[15px] font-extrabold">{industry.title}</h3>
                 <p className="text-[13.5px] text-ink-soft">{industry.desc}</p>
               </div>

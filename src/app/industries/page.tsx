@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
-import IndustryIcon, { type IndustryIconKey } from "@/components/IndustryIcon";
+import { type IndustryIconKey } from "@/components/IndustryIcon";
 
 export const metadata: Metadata = {
   title: "Industries",
@@ -54,10 +56,7 @@ export default function IndustriesPage() {
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8 md:px-12">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[.14] bg-white/[.06] py-1.5 pl-3.5 pr-3.5 text-xs font-bold text-[#C7D4EA]">
-            INDUSTRIES
-          </span>
-          <h1 className="mt-6 max-w-[20ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
+          <h1 className="max-w-[20ch] text-4xl leading-[1.14] font-extrabold text-white md:text-[44px]">
             Industries we <span className="text-[#338DFF]">serve</span>
           </h1>
           <p className="mt-5 max-w-[65ch] text-[#C7D4EA]">
@@ -72,16 +71,24 @@ export default function IndustriesPage() {
         <div className="mx-auto max-w-[1320px] rounded border border-line-soft bg-white p-8 shadow-sm md:p-12">
           <div className="grid gap-5.5 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
-              <div
+              <Link
                 key={industry.title}
-                className="rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
+                href={`/industries/${industry.icon}`}
+                className="group block rounded border border-line-soft bg-canvas p-5.5 transition-shadow hover:shadow-md"
               >
-                <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft">
-                  <IndustryIcon icon={industry.icon} className="h-5 w-5 text-accent" />
-                </span>
+                <Image
+                  src={`/images/icons/industries/${industry.icon}.png`}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="mb-3 h-16 w-16"
+                />
                 <h3 className="mb-1.5 text-[15px] font-extrabold">{industry.title}</h3>
                 <p className="text-[13.5px] text-ink-soft">{industry.desc}</p>
-              </div>
+                <span className="mt-3 inline-block text-[13px] font-bold text-accent">
+                  Learn more <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
