@@ -16,6 +16,20 @@ const navLinkCurrent = "!text-ink !border-accent";
 export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<"solutions" | "industries" | null>(null);
+
+  const menuHandlers = (name: "solutions" | "industries") => ({
+    onMouseEnter: () => setOpenMenu(name),
+    onMouseLeave: () => setOpenMenu(null),
+    onFocus: () => setOpenMenu(name),
+    onBlur: (e: React.FocusEvent<HTMLDivElement>) => {
+      if (!e.currentTarget.contains(e.relatedTarget)) setOpenMenu(null);
+    },
+  });
+  const dropdownClass = (name: "solutions" | "industries") =>
+    `absolute left-1/2 top-full w-[460px] -translate-x-1/2 rounded-lg border border-line-soft bg-white p-3.5 shadow-[0_14px_34px_rgba(20,24,32,0.14)] transition-all duration-150 ${
+      openMenu === name ? "visible translate-y-0.5 opacity-100" : "invisible translate-y-1 opacity-0"
+    }`;
 
   const isCurrent = (href: string) => pathname === href;
   const solutionsCurrent = solutionPaths.includes(pathname);
@@ -34,7 +48,7 @@ export default function Header() {
             About Us
           </Link>
 
-          <div className="group relative py-1.5">
+          <div className="relative py-1.5" {...menuHandlers("solutions")}>
             <Link
               href="/solutions"
               className={`${navLink} inline-flex items-center gap-1 ${solutionsCurrent ? navLinkCurrent : ""}`}
@@ -42,7 +56,7 @@ export default function Header() {
               Solutions &amp; Services
               <span className="text-[9px] text-ink-soft">▾</span>
             </Link>
-            <div className="invisible absolute left-1/2 top-full w-[460px] -translate-x-1/2 translate-y-1 rounded-lg border border-line-soft bg-white p-3.5 opacity-0 shadow-[0_14px_34px_rgba(20,24,32,0.14)] transition-all duration-150 group-hover:visible group-hover:translate-y-0.5 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0.5 group-focus-within:opacity-100">
+            <div className={dropdownClass("solutions")} onClick={() => setOpenMenu(null)}>
               <div className="grid grid-cols-2 gap-1">
                 {solutionLinks.map((link) => (
                   <Link
@@ -61,7 +75,7 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="group relative py-1.5">
+          <div className="relative py-1.5" {...menuHandlers("industries")}>
             <Link
               href="/industries"
               className={`${navLink} inline-flex items-center gap-1 ${industriesCurrent ? navLinkCurrent : ""}`}
@@ -69,7 +83,7 @@ export default function Header() {
               Industries
               <span className="text-[9px] text-ink-soft">▾</span>
             </Link>
-            <div className="invisible absolute left-1/2 top-full w-[460px] -translate-x-1/2 translate-y-1 rounded-lg border border-line-soft bg-white p-3.5 opacity-0 shadow-[0_14px_34px_rgba(20,24,32,0.14)] transition-all duration-150 group-hover:visible group-hover:translate-y-0.5 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0.5 group-focus-within:opacity-100">
+            <div className={dropdownClass("industries")} onClick={() => setOpenMenu(null)}>
               <div className="grid grid-cols-2 gap-1">
                 {industryLinks.map((link) => (
                   <Link
