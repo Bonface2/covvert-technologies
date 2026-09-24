@@ -5,15 +5,37 @@ import { useState } from "react";
 const inputClasses =
   "rounded-[3px] border border-line bg-white px-3 py-2.5 text-[13.5px] text-ink outline-none focus:border-accent";
 
-export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+type Status = "idle" | "sending" | "sent" | "error";
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+export default function ContactForm() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("sending");
+
+    const form = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.get("name"),
+          email: form.get("email"),
+          topic: form.get("topic"),
+          message: form.get("message"),
+        }),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (submitted) {
+  if (status === "sent") {
     return (
       <div className="rounded border border-line-soft bg-white p-6 text-center">
         <h3 className="text-lg font-extrabold text-ink">Thanks — we&apos;ve got your message</h3>
@@ -73,11 +95,18 @@ export default function ContactForm() {
         />
       </div>
 
+      {status === "error" && (
+        <p className="mb-4 text-[12.5px] font-semibold text-red-600">
+          Something went wrong sending your message. Please try again, or email us directly.
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full rounded-[3px] bg-accent px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-dark"
+        disabled={status === "sending"}
+        className="w-full rounded-[3px] bg-accent px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-accent-dark disabled:opacity-60"
       >
-        Send Enquiry
+        {status === "sending" ? "Sending…" : "Send Enquiry"}
       </button>
     </form>
   );
